@@ -1,23 +1,61 @@
+:root {
+  --myGreen: #617073;
+  --myBlue: #7a93ac;
+  --bbBlue: #92bcea;
+  --myPurple: #afb3f7;
+  --myBlack: #171a21;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   line-height: 1.5;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+/* Header CSS */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--myPurple);
+  background-color: var(--myGreen);
+  height: 25%;
+  border-bottom: var(--myPurple) dashed 5px;
 }
 
-p {
-  margin: 0;
+#headerLogo {
+  width: 33%;
+}
+#headerTitle {
+  width: 33%;
+  justify-self: center;
+}
+nav {
+  display: flex;
+  padding-right: 2%;
+  width: 25%;
+  justify-content: space-evenly;
+}
+nav a {
+  text-decoration: none;
+  color: var(--myPurple);
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Banner  */
+
+/* Main section */
+main {
+  display: grid;
 }
