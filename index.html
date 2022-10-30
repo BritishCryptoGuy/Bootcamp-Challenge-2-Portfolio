@@ -4,44 +4,115 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Kieran Parkinson // Web Developer</title>
+    <title>Kieran Parkinson // Web Developer?</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
+  <body class="bottom-border">
     <!-- main logo / nav -->
-    <header>
-      <logo id="headerLogo"></logo>
+    <header class="bottom-border bg-plat">
+      <img
+        id="headerLogo"
+        src="images/github-logo-Avatar.png"
+        alt="avatar for page"
+      />
       <h1 id="headerTitle">Kieran Parkinson</h1>
       <nav>
-        <a id="aboutMe" href="#">About Me</a>
-        <a id="myWork" href="#">My Work</a>
-        <a id="contactMe" href="#">Contact Me</a>
+        <a id="aboutMe" href="#about">About Me</a>
+        <a id="myWork" href="#work">My Work</a>
+        <a id="contactMe" href="#contact">Contact Me</a>
       </nav>
     </header>
 
     <!-- hero banner -->
-    <section class="hero-banner">
+    <section class="hero-banner bottom-border bg-plum">
       <div>
-        <h2>Cool subtitle here!</h2>
+        <h2>
+          | Future Web Developer status
+          <img
+            id="loading-logo"
+            src="images/Loading-colored-resized.png"
+            alt="loading bar"
+          />
+          |
+        </h2>
       </div>
     </section>
 
-    <main class="page-wrapper">
+    <main class="page-wrapper bottom-border bg-plat">
       <!-- about me -->
-      <section class="page-section" id="about">
-        <h2>About Me</h2>
+      <section class="main-section" id="about">
+        <h1>About Me</h1>
+        <img
+          id="profile-pic"
+          src="images/Generic-avatar.jpg"
+          alt="profile picture"
+        />
+        <section id="innerAbout">
+          <h3 class="sub-header">My Past</h3>
+          <p>
+            My name is Kieran Parkinson and i have previously lived the life of
+            a plumber and gas engineer. Then i was introduced to the world of
+            programming.
+          </p>
+
+          <h3 class="sub-header">My Present</h3>
+          <p>
+            My current goal is to become a professional web developer with a
+            beginning language of JavaScript from which i will be pursuing a
+            career path in Web development to further hone and develop my
+            skills.
+          </p>
+
+          <h3 class="sub-header">My Future</h3>
+          <p>My future awaits...</p>
+        </section>
       </section>
 
       <!-- portfolio container -->
-      <section class="page-section" id="work">
-        <h2>Work</h2>
-      </section>
+      <section class="main-section" id="work">
+        <h2 id="work-title">My Work</h2>
+        <a
+          id="work1"
+          href="https://britishcryptoguy.github.io/Bootcamp-Challenge-1-Horiseon/"
+          alt="link to Horiseon webpage"
+          class="bottom-border bg-plat work-sec"
+          ><h5 id="workTitle1">Horiseon Challenge</h5></a
+        >
 
-      <!-- contact -->
-      <section class="page-section contact" id="contact">
-        <h2>Contact Me</h2>
+        <a
+          id="work2"
+          href="#"
+          alt="placeholder image 1"
+          class="bottom-border bg-plat work-sec"
+          ><h5 id="workTitle2">Placeholder title 1</h5></a
+        >
+        <a
+          id="work3"
+          href="#"
+          alt="placeholder image 2"
+          class="bg-plat work-sec"
+          ><h5 id="workTitle3">Placeholder title 2</h5></a
+        >
+        <a
+          id="work4"
+          href="#"
+          alt="placeholder image 3"
+          class="bg-plat work-sec"
+          ><h5 id="workTitle4">Placeholder title 3</h5></a
+        >
       </section>
     </main>
+
+    <footer class="bottom-border bg-plum" id="contact">
+      <h2>Contact Me:</h2>
+      <a
+        id="github"
+        href="https://github.com/BritishCryptoGuy"
+        alt="Link to Github page"
+        >Github</a
+      >
+      <h6 id="email">Kieran_parkinson@hotmail.com</h6>
+    </footer>
   </body>
 </html>
