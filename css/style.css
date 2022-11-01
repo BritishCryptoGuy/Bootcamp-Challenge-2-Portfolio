@@ -247,6 +247,10 @@ section p {
     min-height: 40%;
     height: 20%;
   }
+  #headerLogo {
+    width: 30%;
+    height: auto;
+  }
   #headerTitle {
     font-size: 1.5em;
   }
