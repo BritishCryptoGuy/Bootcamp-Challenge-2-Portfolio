@@ -248,8 +248,9 @@ section p {
     height: 20%;
   }
   #headerLogo {
-    width: 30%;
+    width: 20%;
     height: auto;
+    align-self: center;
   }
   #headerTitle {
     font-size: 1.5em;
