@@ -16,8 +16,6 @@
 html,
 body {
   height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -30,38 +28,27 @@ header {
   justify-content: space-between;
   min-height: 20%;
   height: 20%;
-  border-top: var(--myBlack) solid 5px;
-  position: relative;
 }
 #headerLogo {
   height: 100%;
   width: auto;
-  padding-left: 3px;
+  margin: 2px;
 }
-#headerTitle {
-  display: flex;
-  justify-content: center;
-  right: 600px;
-}
+
 nav {
   display: flex;
-  padding-right: 2.5%;
   width: 300px;
-  justify-content: space-between;
+  justify-content: space-around;
+  box-shadow: 2px 2px 1px 1px var(--myPlum);
 }
 nav a {
   text-decoration: none;
-  color: var(--myPlum);
+  color: var(--myPlatinum);
 }
 nav a:hover {
-  text-decoration: underline;
+  color: var(--myPlum);
 }
 
-header,
-.hero-banner {
-  border-left: var(--myBlack) solid 5px;
-  border-right: var(--myBlack) solid 5px;
-}
 /* Hero Banner  */
 .hero-banner {
   display: flex;
@@ -69,7 +56,7 @@ header,
   min-height: 30%;
   height: 30%;
   align-items: center;
-  font-size: 21px;
+  font-size: 20px;
 }
 #loading-logo {
   width: 150px;
@@ -77,136 +64,107 @@ header,
 }
 /* Main section */
 main {
-  grid-column: 1/5;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 1.5fr 3fr;
   display: grid;
   grid-template-areas:
-    "about1 work1 work1"
-    "about1 work1 work1"
-    "about1 work1 work1";
+    "about1 work1"
+    "about1 work1"
+    "about1 work1";
   flex: 1em;
 }
 /* Main about CSS  */
-.main-section h1 {
-  display: flex;
-  justify-content: center;
-  text-decoration: underline;
-  font-size: xx-large;
-}
 #about {
+  text-align: center;
+  font-size: medium;
   grid-area: about1;
-  border: var(--myBlack) solid 5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  border-right: 2px solid var(--myPlum);
+  border-left: solid 2px var(--myPlum);
 }
 #profile-pic {
   display: flex;
   align-self: center;
   max-height: 350px;
   max-width: 200px;
-  border: var(--myPlum) solid 5px;
+  border: var(--myPlum) 2px solid;
 }
 .sub-header {
   font-size: x-large;
-  display: flex;
   text-decoration: underline;
   padding-left: 5px;
-  justify-content: center;
 }
 section p {
-  display: flex;
-  justify-content: center;
   padding: 5% 5%;
-  font-size: larger;
-  text-align: center;
+  font-size: large;
 }
 /* Main Work css  */
 #work {
   grid-area: work1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     "work1 work1 work2"
     "work1 work1 work2"
     "work3 work3 work4";
-  border: var(--myBlack) solid 5px;
-  position: relative;
 }
 #work-title {
-  position: absolute;
-  color: var(--myPlum);
-  background-color: rgba(220, 224, 217, 0.9);
-  max-width: 400px;
-  width: 300px;
-  height: 100px;
-  font-size: xx-large;
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 1;
+  color: var(--myPlatinum);
+  position: relative;
+  left: -30%;
+  top: -10%;
+  background-color: rgba(128, 143, 133, 0.9);
+  border: var(--myPlatinum) 1px solid;
   padding: 25px;
-  display: block;
+  height: 100px;
   text-align: center;
-  top: 465px;
-  right: 175px;
-  text-decoration: underline;
-  border: var(--myBlack) solid 5px;
+  width: 200px;
+  z-index: 1;
 }
 .work-sec {
   display: flex;
   background-size: cover;
-  background-size: cover;
   background-repeat: no-repeat;
-  border-left: var(--myBlack) solid 5px;
-  border-right: var(--myBlack) solid 5px;
-  margin: -1px;
 }
 #work1 {
   grid-area: work1;
-  background-image: url(../images/Horiseon_screenshot.png);
+  background-image: url(../images/Weather_dashboard_screenshot-min.png);
 }
 #work2 {
   grid-area: work2;
-  background-image: url(../images/placeholder-img1.jpg);
-  width: 100%;
-  justify-content: flex-end;
+  background-image: url(../images/Horiseon_screenshot.png);
 }
 #work3 {
   grid-area: work3;
-  background-image: url(../images/placeholder-img2.jpg);
+  background-image: url(../images/WorkDayScheduler_screenshot-min_cropped.png);
 }
 #work4 {
   grid-area: work4;
-  background-image: url(../images/placeholder-img3.jpg);
-  justify-content: flex-end;
+  background-image: url(../images/password-generator-website_screenshot-min.png);
 }
 .work-title {
   background-color: rgba(220, 224, 217, 1);
   padding: 5%;
   font-size: large;
 }
-#workTitle1,
-#workTitle2 {
-  align-self: flex-start;
+.hoverText {
+  background-color: rgba(0, 0, 0, 0.9);
+  background: linear-gradient(
+    to bottom right,
+    rgba(128, 143, 133, 0.9),
+    var(--myPlum)
+  );
+  text-decoration: none;
+  color: var(--myPlatinum);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-#workTitle3,
-#workTitle4 {
-  align-self: flex-end;
-}
-#workTitle1 {
-  border-bottom: var(--myBlack) solid 5px;
-  border-right: var(--myBlack) solid 5px;
-}
-#workTitle2 {
-  border-bottom: var(--myBlack) solid 5px;
-  border-left: var(--myBlack) solid 5px;
-}
-#workTitle3 {
-  border-top: var(--myBlack) solid 5px;
-  border-right: var(--myBlack) solid 5px;
-}
-#workTitle4 {
-  border-top: var(--myBlack) solid 5px;
-  border-left: var(--myBlack) solid 5px;
-}
+
 /* Footer CSS  */
 #contact {
   padding-top: 8px;
@@ -214,9 +172,8 @@ section p {
   flex-direction: column;
   align-items: center;
   font-size: large;
-  height: 400px;
+  height: 200px;
   justify-content: center;
-  border-top: var(--myBlack) solid 10px;
 }
 #github {
   text-decoration: none;
@@ -229,9 +186,7 @@ section p {
   font-size: large;
 }
 /* Class aesthetic selection */
-.bottom-border {
-  border-bottom: var(--myBlack) solid 10px;
-}
+
 .bg-plum {
   background-color: var(--myPlum);
   color: var(--myPlatinum);
@@ -239,6 +194,14 @@ section p {
 .bg-plat {
   background-color: var(--myPlatinum);
   color: var(--myPlum);
+}
+.bg-plat-xan {
+  background-color: var(--myXanadu);
+  color: var(--myPlatinum);
+}
+.bg-xan-plat {
+  background-color: var(--myPlatinum);
+  color: var(--myXanadu);
 }
 
 @media (max-width: 780px) {
@@ -259,12 +222,12 @@ section p {
     flex-direction: column;
     align-items: flex-end;
     width: auto;
+    padding-right: 5px;
+    box-shadow: none;
   }
 
   /* Hero Banner media 780px  */
-  .bottom-border {
-    border-bottom: var(--myBlack) solid 5px;
-  }
+
   .hero-banner {
     min-height: 20%;
     font-size: 14px;
@@ -279,33 +242,22 @@ section p {
     flex-wrap: wrap;
   }
   #work {
-    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "work1 work2"
       "work3 work4";
     height: 600px;
     width: 100%;
-    border: 0;
   }
   #work-title {
-    top: 250px;
-    margin: auto;
-    width: 60%;
-    padding: 0%;
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
   }
-  #work4 {
-    border-top: var(--myBlack) 5px solid;
-  }
+
   /* Footer media & multiple 780px  */
   #contact {
-    border: var(--myBlack) solid 5px;
-    border-top: 0;
     min-height: 50%;
-  }
-  header,
-  .hero-banner {
-    border-bottom: 0;
   }
 }
 
@@ -318,7 +270,6 @@ section p {
     min-height: 220px;
     height: 220px;
     flex-direction: column;
-    border: var(--myBlack) solid 5px;
     padding-bottom: 45px;
   }
 
@@ -329,6 +280,7 @@ section p {
 
   #headerTitle {
     position: unset;
+    padding-bottom: 5px;
   }
 
   nav {
@@ -338,9 +290,6 @@ section p {
   }
 
   /* Hero Banner media 450px */
-  .hero-banner {
-    border: var(--myBlack) solid 5px;
-  }
 
   .hero-banner h2 {
     font-size: 100%;
@@ -355,16 +304,11 @@ section p {
     display: flex;
     flex-wrap: wrap;
   }
-  #about {
-    border-bottom: 0;
-  }
   #work {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border-left: var(--myBlack) solid 5px;
-    border-right: var(--myBlack) solid 5px;
   }
   #work-title {
     position: relative;
@@ -376,55 +320,11 @@ section p {
     right: auto;
     left: auto;
   }
-  #work1 {
-    height: 300px;
-    width: 100%;
-    border: 0;
-    border-top: var(--myBlack) solid 5px;
-  }
-  #workTitle1 {
-    background-color: rgba(220, 224, 217, 1);
-  }
-  #work2 {
-    height: 300px;
-    width: 100%;
-    border: 0;
-    border-top: var(--myBlack) solid 5px;
-  }
-
-  #workTitle2 {
-    background-color: rgba(220, 224, 217, 1);
-  }
-  #work3 {
-    height: 300px;
-    width: 100%;
-    border: 0;
-    border-top: var(--myBlack) solid 5px;
-  }
-  #workTitle3 {
-    background-color: rgba(220, 224, 217, 1);
-    align-self: flex-start;
-    border-bottom: var(--myBlack) solid 5px;
-    border-top: 0;
-  }
+  #work1,
+  #work2,
+  #work3,
   #work4 {
-    height: 300px;
+    height: 400px;
     width: 100%;
-    border: 0;
-    border-top: var(--myBlack) solid 5px;
-  }
-  #workTitle4 {
-    background-color: rgba(220, 224, 217, 1);
-    align-self: flex-start;
-    border-bottom: var(--myBlack) solid 5px;
-    border-top: 0;
-  }
-  /* Footer media 450px */
-  #contact {
-    border: var(--myBlack) solid 5px;
-  }
-  /* Class media 450px */
-  .bottom-border {
-    border-bottom: 0;
   }
 }
